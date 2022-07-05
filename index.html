@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Special+Elite&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css" />
+    <title>Do I feel lucky ?</title>
+  </head>
+  <body>
+    <main class="grid">
+
+      <div class="popup">
+        <button class="popup__esc">X</button>
+        <h1 class="popup__header">How to Play</h1>
+        <ul class="popup__description">
+          <li>Roll dice</li>
+          <li>What you roll is added to "current" score</li>
+          <li>If either of the dice roll a 1, current score goes to 0 and you lose your turn</li>
+          <li>If you press 'hold' during your turn, your current score becomes your accumulated score</li>
+          <li>First player to 200 accumulated points wins!</li>
+        </ul>
+      </div>
+
+      <section class="player player--1 player--active">
+        <h2 class="player__name" id="name--1">Player 1</h2>
+        <p class="player__score" id="score--1">0</p>
+        <div class="player__current">
+          <p class="player__current-label">Current</p>
+          <p class="player__current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <section class="gameplay">
+        <div class="gameplay__dice">
+          <img
+            class="gameplay__dice__img-1"
+            src="img/dice-5.png"
+            alt="Playing dice"
+            class="dice"
+          />
+          <img
+            class="gameplay__dice__img-2"
+            src="img/dice-4.png"
+            alt="Playing dice"
+            class="dice"
+          />
+        </div>
+
+        <div class="gameplay__buttons">
+          <button class="gameplay__buttons__btn gameplay__buttons__btn--new">🔄 New game</button>
+          <button class="gameplay__buttons__btn gameplay__buttons__btn--roll">🎲 Roll dice</button>
+          <button class="gameplay__buttons__btn gameplay__buttons__btn--hold">✋ Hold</button>
+        </div>
+
+      </section>
+
+      <section class="player player--2">
+        <h2 class="player__name" id="name--2">Player 2</h2>
+        <p class="player__score" id="score--2">0</p>
+        <div class="player__current">
+          <p class="player__current-label">Current</p>
+          <p class="player__current-score" id="current--2">0</p>
+        </div>
+      </section>
+
+      <!-- <div class="winner">
+        
+
+      </div> -->
+
+    </main>
+
+  
+
+
+    <script src="game.js"></script>
+  </body>
+</html>
