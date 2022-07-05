@@ -29,7 +29,8 @@ main {
     main {
       display: flex;
       flex-direction: column;
-      align-items: center; } }
+      align-items: center;
+      justify-items: space-between; } }
 
 .player {
   grid-row: 2 / 3;
@@ -43,8 +44,9 @@ main {
   @media (max-width: 500px) {
     .player {
       width: 60vw;
-      height: 50vh;
-      margin: 5rem; } }
+      height: 20vh;
+      margin: 5rem;
+      border-radius: 1rem; } }
   .player__name {
     font-size: 5rem;
     text-align: center;
@@ -67,6 +69,10 @@ main {
     font-family: "Raleway", sans-serif;
     font-size: 3rem;
     margin-top: 10rem; }
+    @media (max-width: 500px) {
+      .player__current {
+        margin: 0;
+        border-radius: 1rem; } }
   .player--1 {
     grid-column: col-start 1 / span 1; }
     @media (max-width: 500px) {
@@ -78,7 +84,8 @@ main {
     @media (max-width: 500px) {
       .player--2 {
         grid-row: 3 / 4;
-        grid-column: 1 / -1; } }
+        grid-column: 1 / -1;
+        margin-bottom: 50rem; } }
   .player--active {
     background-color: rgba(206, 240, 202, 0.8);
     transition: all 0.2s; }
@@ -114,6 +121,11 @@ main {
       text-transform: uppercase;
       cursor: pointer;
       background-color: rgba(1, 170, 228, 0.2); }
+      @media (max-width: 500px) {
+        .gameplay__buttons__btn {
+          font-size: 3rem;
+          width: 50rem;
+          height: 10rem; } }
       .gameplay__buttons__btn:active {
         transform: translate(-1%, 10%);
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
@@ -138,7 +150,7 @@ main {
       grid-row: 2 / 3;
       grid-column: 1 / -1;
       position: absolute;
-      height: 50vh;
+      height: 25vh;
       width: 80vw; } }
   .popup__esc {
     align-self: flex-end;
